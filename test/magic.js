@@ -1,24 +1,22 @@
 $(document).ready(function () {
- 
+
     // variables
     $surface = $('.surface');
     $car = $('.car');
     $img = $('.car img');
     let flag = true;
- 
+
     const cars = ['../images/animation/Img_05.png', '../images/animation/Img_06.png'];
- 
- 
+
+
     // keypress event
-    $(document).on('keypress', function (e) {
-        if (e.which == 13) {
-            $($surface).toggleClass('moveRight');
-            $($car).toggleClass('suspension');
-        }
+    $(window).load(function (e) {
+        $($surface).toggleClass('moveRight');
+        $($car).toggleClass('suspension');
     })
- 
+
     // lights
-    $(document).on('keypress', function (e) {
+    $(window).load(function (e) {
         if (e.which == 119) {
             if (flag) {
                 flag = false;
@@ -29,6 +27,6 @@ $(document).ready(function () {
             }
         }
     })
- 
- 
+
+
 });
